@@ -4,6 +4,12 @@
     <TargetFramework>$(SonetaTargetFramework)</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Res\DokKosztowy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Res\DokKosztowy.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\ProcessTesting\ProcessTesting.csproj" />
   </ItemGroup>
 </Project>
