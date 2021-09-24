@@ -18,12 +18,14 @@ namespace ProcessTesting.Tests
         internal enum Names
         {
             CostLetterProcess,
-            CostLetterTupleDef
+            CostLetterTupleDef,
+            WfTest
         }
 
         internal static readonly IDictionary<Names, Guid> Guids = new Dictionary<Names, Guid> {
             {Names.CostLetterProcess, new Guid("00000000-0016-0004-0001-000000000000")},
-            {Names.CostLetterTupleDef, new Guid("3B16A8B0-55F0-4C97-BE28-DDBE2B428E40")}
+            {Names.CostLetterTupleDef, new Guid("3B16A8B0-55F0-4C97-BE28-DDBE2B428E40")},
+            {Names.WfTest, new Guid("96ca4160-acc6-4b89-a7c5-50f8f29aec2e")}
         };
 
         internal static void SetDefinition(TestBase testBase, Guid wfDefGuid, string resourceName) {

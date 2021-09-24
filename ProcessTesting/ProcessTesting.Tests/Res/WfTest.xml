@@ -1,0 +1,1072 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session xmlns="http://www.soneta.pl/schema/business">
+  <WFDefinition id="WFDefinition_15" guid="96ca4160-acc6-4b89-a7c5-50f8f29aec2e">
+    <Symbol>WFT</Symbol>
+    <Name>WfTest</Name>
+    <Numerator>
+      <Wzor>WorkflowDefinition.Symbol/DateFrom.Year:4/DateFrom.Month:2/*</Wzor>
+      <PodczasEdycji>False</PodczasEdycji>
+    </Numerator>
+    <Description />
+    <SingleWorkflowInstance>True</SingleWorkflowInstance>
+    <EditType>Advanced</EditType>
+    <Locked>False</Locked>
+    <Version>
+      <Major>0</Major>
+      <Minor>0</Minor>
+    </Version>
+    <PrevVersionGuid>96ca4160-acc6-4b89-a7c5-50f8f29aec2e</PrevVersionGuid>
+    <SerializedDiagram>[{"Guid":"dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1","Bounds":{"Location":{"IsEmpty":true,"X":0.0,"Y":0.0},"Size":"800, 200","X":0.0,"Y":0.0,"Width":800.0,"Height":200.0,"Left":0.0,"Top":0.0,"Right":800.0,"Bottom":200.0,"IsEmpty":false},"OwningLane":"96ca4160-acc6-4b89-a7c5-50f8f29aec2e","Text":"Domyślna rola procesowa","Type":1,"ShapeType":0,"ShapeGroup":0,"LaneIndex":1,"IconName":null},{"Guid":"96ca4160-acc6-4b89-a7c5-50f8f29aec2e","Bounds":{"Location":{"IsEmpty":false,"X":20.0,"Y":20.0},"Size":"800, 200","X":20.0,"Y":20.0,"Width":800.0,"Height":200.0,"Left":20.0,"Top":20.0,"Right":820.0,"Bottom":220.0,"IsEmpty":false},"OwningLane":"00000000-0000-0000-0000-000000000000","Text":"WfTest","Type":0,"ShapeType":0,"ShapeGroup":0,"LaneIndex":0,"IconName":null},{"Guid":"770b24b4-f7b7-4d35-a059-5db6ff4ed72e","Bounds":{"Location":{"IsEmpty":false,"X":176.199921,"Y":80.59993},"Size":"160, 84.0000153","X":176.199921,"Y":80.59993,"Width":160.0,"Height":84.0000153,"Left":176.199921,"Top":80.59993,"Right":336.199921,"Bottom":164.599945,"IsEmpty":false},"OwningLane":"dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1","Text":"AutoStart","Type":2,"ShapeType":0,"ShapeGroup":0,"LaneIndex":0,"IconName":null},{"Guid":"0ff88d2d-4355-4f0c-9203-456dafcd0f10","Bounds":{"Location":{"IsEmpty":false,"X":172.999924,"Y":244.599915},"Size":"160, 84.0000153","X":172.999924,"Y":244.599915,"Width":160.0,"Height":84.0000153,"Left":172.999924,"Top":244.599915,"Right":332.999939,"Bottom":328.5999,"IsEmpty":false},"OwningLane":"dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1","Text":"FirstTask","Type":2,"ShapeType":0,"ShapeGroup":0,"LaneIndex":0,"IconName":null},{"Guid":"17304fae-a6b2-4d13-8564-acbe2c11c0ca","Bounds":{"Location":{"IsEmpty":false,"X":169.799911,"Y":425.399841},"Size":"160, 84.0000153","X":169.799911,"Y":425.399841,"Width":160.0,"Height":84.0000153,"Left":169.799911,"Top":425.399841,"Right":329.799927,"Bottom":509.399841,"IsEmpty":false},"OwningLane":"dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1","Text":"MultiTask","Type":2,"ShapeType":0,"ShapeGroup":0,"LaneIndex":0,"IconName":null},{"Guid":"8c81f452-90bd-4e41-92af-9c0900897826","Bounds":{"Location":{"IsEmpty":false,"X":170.599915,"Y":768.9998},"Size":"160, 84.0000153","X":170.599915,"Y":768.9998,"Width":160.0,"Height":84.0000153,"Left":170.599915,"Top":768.9998,"Right":330.5999,"Bottom":852.9998,"IsEmpty":false},"OwningLane":"dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1","Text":"End","Type":2,"ShapeType":0,"ShapeGroup":0,"LaneIndex":0,"IconName":null},{"Guid":"345e7174-2881-47c8-84fb-7d777a983105","Bounds":{"Location":{"IsEmpty":false,"X":168.199921,"Y":588.1999},"Size":"160, 84.0000153","X":168.199921,"Y":588.1999,"Width":160.0,"Height":84.0000153,"Left":168.199921,"Top":588.1999,"Right":328.199921,"Bottom":672.1999,"IsEmpty":false},"OwningLane":"dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1","Text":"Join","Type":2,"ShapeType":0,"ShapeGroup":0,"LaneIndex":0,"IconName":null},{"Guid":"b8fe5f44-73d0-45f4-b90d-78d958ee39c9","Text":"A","Type":3,"ShapeType":4,"ShapeGroup":0,"Location":{"IsEmpty":false,"X":256.1999,"Y":204.599915},"LinePoints":[{"IsEmpty":false,"X":256.1999,"Y":165.599915},{"IsEmpty":false,"X":256.1999,"Y":243.599915}],"SourceNodeGuid":"770b24b4-f7b7-4d35-a059-5db6ff4ed72e","SourceNodePort":0,"TargetNodeGuid":"0ff88d2d-4355-4f0c-9203-456dafcd0f10","TargetNodePort":0,"FromPoint":{"IsEmpty":true,"X":0.0,"Y":0.0},"ToPoint":{"IsEmpty":true,"X":0.0,"Y":0.0}},{"Guid":"7aa665a3-28ef-4e79-ac04-9a49a527454a","Text":"B","Type":3,"ShapeType":4,"ShapeGroup":0,"Location":{"IsEmpty":false,"X":252.999924,"Y":376.999878},"LinePoints":[{"IsEmpty":false,"X":252.999924,"Y":329.5999},{"IsEmpty":false,"X":252.999924,"Y":424.399841}],"SourceNodeGuid":"0ff88d2d-4355-4f0c-9203-456dafcd0f10","SourceNodePort":0,"TargetNodeGuid":"17304fae-a6b2-4d13-8564-acbe2c11c0ca","TargetNodePort":0,"FromPoint":{"IsEmpty":true,"X":0.0,"Y":0.0},"ToPoint":{"IsEmpty":true,"X":0.0,"Y":0.0}},{"Guid":"572ea385-2cc7-4e63-a2b5-b0db12151fdd","Text":"C","Type":3,"ShapeType":4,"ShapeGroup":0,"Location":{"IsEmpty":false,"X":249.799911,"Y":548.799866},"LinePoints":[{"IsEmpty":false,"X":249.799911,"Y":510.399841},{"IsEmpty":false,"X":249.799911,"Y":587.1999}],"SourceNodeGuid":"17304fae-a6b2-4d13-8564-acbe2c11c0ca","SourceNodePort":0,"TargetNodeGuid":"345e7174-2881-47c8-84fb-7d777a983105","TargetNodePort":0,"FromPoint":{"IsEmpty":true,"X":0.0,"Y":0.0},"ToPoint":{"IsEmpty":true,"X":0.0,"Y":0.0}},{"Guid":"d59117e1-ce0c-4bb7-a2d9-45acc1e51c4e","Text":"D","Type":3,"ShapeType":4,"ShapeGroup":0,"Location":{"IsEmpty":false,"X":248.199921,"Y":720.599854},"LinePoints":[{"IsEmpty":false,"X":248.199921,"Y":673.1999},{"IsEmpty":false,"X":248.199921,"Y":767.9998}],"SourceNodeGuid":"345e7174-2881-47c8-84fb-7d777a983105","SourceNodePort":0,"TargetNodeGuid":"8c81f452-90bd-4e41-92af-9c0900897826","TargetNodePort":0,"FromPoint":{"IsEmpty":true,"X":0.0,"Y":0.0},"ToPoint":{"IsEmpty":true,"X":0.0,"Y":0.0}}]</SerializedDiagram>
+    <IsDeployed>True</IsDeployed>
+    <IsDiagramEditedInHtml>False</IsDiagramEditedInHtml>
+    <TaskNameInTransitionVisibility>None</TaskNameInTransitionVisibility>
+  </WFDefinition>
+  <WFProcessRole id="WFProcessRole_23" guid="dba1e48c-e5f3-4c9f-b0d9-294bc73c39e1">
+    <Name>Domyślna rola procesowa</Name>
+    <WorkflowDefinition>WFDefinition_15</WorkflowDefinition>
+    <Lp>1</Lp>
+    <ExecutorType>TaskExecutor</ExecutorType>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <Operator />
+    <TaskUser />
+    <SetExecutorByProcessRoleCode>
+      <Code />
+    </SetExecutorByProcessRoleCode>
+    <GetTaskUsersByProcessRoleCode>
+      <Code />
+    </GetTaskUsersByProcessRoleCode>
+  </WFProcessRole>
+  <TaskDefinition id="TaskDefinition_140" guid="770b24b4-f7b7-4d35-a059-5db6ff4ed72e">
+    <TableName>BasicDocs</TableName>
+    <Name>WFT - WfTest_Start_1</Name>
+    <FormatedName>AutoStart</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>True</Algorithm>
+    <MultiTask>False</MultiTask>
+    <Code>public class Task_WFT__WfTest_Start_1937119397 : TaskCalculatorBasicDocs {
+
+public Task_WFT__WfTest_Start_1937119397() { }
+public Task_WFT__WfTest_Start_1937119397(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(Row.IsAdded || Task != null)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+//** begin get managing row **
+public override IManagingRow GetManagingRow(Soneta.Business.Db.GetManagingRowHandlerEventArgs args) {
+	return base.GetManagingRow(args);
+}
+//** end get managing row **
+
+//** begin allow attachment signing **
+public override bool AllowAttachmentSigning(Soneta.Business.Db.AllowAttachmentSigningHandlerEventArgs args) {
+	return base.AllowAttachmentSigning(args);
+}
+//** end allow attachment signing **
+
+//** begin dependent on workflow condition **
+
+//** end dependent on workflow condition **
+
+//** begin get task users **
+
+//** end get task users **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>True</IsStart>
+    <WFDefinition>WFDefinition_15</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0005-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <GetSysNotificationsCode>
+      <Code />
+    </GetSysNotificationsCode>
+    <VerifierCheckType>Warning</VerifierCheckType>
+    <ProcessManagementVisibilityType>ShowBoth</ProcessManagementVisibilityType>
+    <ProcessRole>WFProcessRole_23</ProcessRole>
+    <SubprocessDef />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_153">
+        <TaskDefinition>TaskDefinition_140</TaskDefinition>
+        <TableName>BasicDocs</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { BasicDocument };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Soneta.Business.Db.TaskTrigger : TaskTrigger - definicja wyzwalacza zadania
+// BasicDocument : BasicDocument - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu BasicDocument,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+    <WFItemDescRels />
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_141" guid="0ff88d2d-4355-4f0c-9203-456dafcd0f10">
+    <TableName>BasicDocs</TableName>
+    <Name>WFT - WfTest_Zadanie_1</Name>
+    <FormatedName>FirstTask</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTask>False</MultiTask>
+    <Code>public class Task_WFT__WfTest_Zadanie_160006165 : TaskCalculatorBasicDocs {
+
+public Task_WFT__WfTest_Zadanie_160006165() { }
+public Task_WFT__WfTest_Zadanie_160006165(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Workflow.Dms.BasicDocument row = (Soneta.Workflow.Dms.BasicDocument)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+//** begin get managing row **
+public override IManagingRow GetManagingRow(Soneta.Business.Db.GetManagingRowHandlerEventArgs args) {
+	return base.GetManagingRow(args);
+}
+//** end get managing row **
+
+//** begin allow attachment signing **
+public override bool AllowAttachmentSigning(Soneta.Business.Db.AllowAttachmentSigningHandlerEventArgs args) {
+	return base.AllowAttachmentSigning(args);
+}
+//** end allow attachment signing **
+
+//** begin dependent on workflow condition **
+
+//** end dependent on workflow condition **
+
+//** begin get task users **
+
+//** end get task users **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_15</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <GetSysNotificationsCode>
+      <Code />
+    </GetSysNotificationsCode>
+    <VerifierCheckType>Warning</VerifierCheckType>
+    <ProcessManagementVisibilityType>ShowBoth</ProcessManagementVisibilityType>
+    <ProcessRole>WFProcessRole_23</ProcessRole>
+    <SubprocessDef />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_154">
+        <TaskDefinition>TaskDefinition_141</TaskDefinition>
+        <TableName>BasicDocs</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { BasicDocument };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Soneta.Business.Db.TaskTrigger : TaskTrigger - definicja wyzwalacza zadania
+// BasicDocument : BasicDocument - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu BasicDocument,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+    <WFItemDescRels />
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_142" guid="17304fae-a6b2-4d13-8564-acbe2c11c0ca">
+    <TableName>BasicDocs</TableName>
+    <Name>WFT - WfTest_Zadanie_2</Name>
+    <FormatedName>MultiTask</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTask>False</MultiTask>
+    <Code>public class Task_WFT__WfTest_Zadanie_260202773 : TaskCalculatorBasicDocs {
+
+public Task_WFT__WfTest_Zadanie_260202773() { }
+public Task_WFT__WfTest_Zadanie_260202773(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Workflow.Dms.BasicDocument row = (Soneta.Workflow.Dms.BasicDocument)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+//** begin get managing row **
+public override IManagingRow GetManagingRow(Soneta.Business.Db.GetManagingRowHandlerEventArgs args) {
+	return base.GetManagingRow(args);
+}
+//** end get managing row **
+
+//** begin allow attachment signing **
+public override bool AllowAttachmentSigning(Soneta.Business.Db.AllowAttachmentSigningHandlerEventArgs args) {
+	return base.AllowAttachmentSigning(args);
+}
+//** end allow attachment signing **
+
+//** begin dependent on workflow condition **
+
+//** end dependent on workflow condition **
+
+//** begin get task users **
+public override IEnumerable&lt;ITaskUser&gt; GetTaskUsers() {
+	var itu = new List&lt;ITaskUser&gt;();
+            
+	itu.Add(KadryModule.GetInstance(Session).Pracownicy.WgKodu["006"]);
+	itu.Add(BusinessModule.GetInstance(Session).Operators.ByName["Administrator"]);
+
+	return itu;
+}
+//** end get task users **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_15</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <MultiTaskType>ByGetTaskUsers</MultiTaskType>
+    <GetSysNotificationsCode>
+      <Code />
+    </GetSysNotificationsCode>
+    <VerifierCheckType>Warning</VerifierCheckType>
+    <ProcessManagementVisibilityType>ShowBoth</ProcessManagementVisibilityType>
+    <ProcessRole>WFProcessRole_23</ProcessRole>
+    <SubprocessDef />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_155">
+        <TaskDefinition>TaskDefinition_142</TaskDefinition>
+        <TableName>BasicDocs</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { BasicDocument };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Soneta.Business.Db.TaskTrigger : TaskTrigger - definicja wyzwalacza zadania
+// BasicDocument : BasicDocument - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu BasicDocument,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+    <WFItemDescRels />
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_143" guid="345e7174-2881-47c8-84fb-7d777a983105">
+    <TableName>BasicDocs</TableName>
+    <Name>WFT - WfTest_Zadanie_3</Name>
+    <FormatedName>Join</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTask>False</MultiTask>
+    <Code>public class Task_WFT__WfTest_Zadanie_360137237 : TaskCalculatorBasicDocs {
+
+public Task_WFT__WfTest_Zadanie_360137237() { }
+public Task_WFT__WfTest_Zadanie_360137237(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+public override bool IsVisibleInMenu(GuidedRow guidedRow) {
+	Soneta.Workflow.Dms.BasicDocument row = (Soneta.Workflow.Dms.BasicDocument)guidedRow;
+	return true;
+}
+
+public override bool IsVisibleInMenu() {
+	return base.IsVisibleInMenu();
+}
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+//** begin get managing row **
+public override IManagingRow GetManagingRow(Soneta.Business.Db.GetManagingRowHandlerEventArgs args) {
+	return base.GetManagingRow(args);
+}
+//** end get managing row **
+
+//** begin allow attachment signing **
+public override bool AllowAttachmentSigning(Soneta.Business.Db.AllowAttachmentSigningHandlerEventArgs args) {
+	return base.AllowAttachmentSigning(args);
+}
+//** end allow attachment signing **
+
+//** begin dependent on workflow condition **
+
+//** end dependent on workflow condition **
+
+//** begin get task users **
+
+//** end get task users **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>InMenu</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_15</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0006-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>True</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <GetSysNotificationsCode>
+      <Code />
+    </GetSysNotificationsCode>
+    <VerifierCheckType>Warning</VerifierCheckType>
+    <ProcessManagementVisibilityType>ShowBoth</ProcessManagementVisibilityType>
+    <ProcessRole>WFProcessRole_23</ProcessRole>
+    <SubprocessDef />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_156">
+        <TaskDefinition>TaskDefinition_143</TaskDefinition>
+        <TableName>BasicDocs</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { BasicDocument };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Soneta.Business.Db.TaskTrigger : TaskTrigger - definicja wyzwalacza zadania
+// BasicDocument : BasicDocument - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu BasicDocument,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+    <WFItemDescRels />
+  </TaskDefinition>
+  <TaskDefinition id="TaskDefinition_144" guid="8c81f452-90bd-4e41-92af-9c0900897826">
+    <TableName>BasicDocs</TableName>
+    <Name>WFT - WfTest_Koniec_1</Name>
+    <FormatedName>End</FormatedName>
+    <Description />
+    <Locked>False</Locked>
+    <IsNotification>False</IsNotification>
+    <NotificationType>Expression</NotificationType>
+    <NotificationTime>0:00</NotificationTime>
+    <AllowModification>False</AllowModification>
+    <IsVisibleInScheduler>True</IsVisibleInScheduler>
+    <Algorithm>False</Algorithm>
+    <MultiTask>False</MultiTask>
+    <Code>public class Task_WFT__WfTest_Koniec_11822390907 : TaskCalculatorBasicDocs {
+
+public Task_WFT__WfTest_Koniec_11822390907() { }
+public Task_WFT__WfTest_Koniec_11822390907(Task t)
+{
+	task = t;
+	row = (GuidedRow)t.Parent;
+	definition = t.Definition;
+}
+
+//** begin enable condition **
+public override bool IsEnable() {
+	if(true)
+	{
+		Notification = Start;
+		return true;
+	}
+	else
+		return false;
+}
+
+//** end enable condition **
+
+//** begin active condition **
+public override bool IsActive() {
+	return true;
+}
+//** end active condition **
+
+//** begin realised condition **
+public override bool IsRealised() {
+	return InternalIsRealized();
+}
+//** end realised condition **
+
+//** begin start condition **
+
+//** end start condition **
+
+//** begin overdue time condition **
+
+//** end overdue time condition **
+
+//** begin action **
+public override void Action() {
+	base.Action();
+}
+//** end action **
+
+//** begin other methods **
+
+//** end other methods **
+
+//** begin init task properties **
+public override void InitTaskProperties(Soneta.Business.Db.Task task) {
+	if(task != null) {
+		base.InitTaskProperties(task);
+
+		// Tutaj wprowadź kod inicjujący właściwości zadania...
+
+	}
+}
+//** end init task properties **
+
+//** begin get parent **
+public override GuidedRow GetParent(Soneta.Business.Db.Task task, Soneta.Business.IWFWorkflow workflow, Soneta.Business.IGuidedRow row, ref Soneta.Business.Context context) {
+	return base.GetParent(task, workflow, row, ref context);
+}
+
+
+// base.GetParent działa w następujący sposób:
+// 1. Jeżeli definicja zadania jest różna od null i ma ustawiony parametr schemat generatora to zwracana jest wartość z wywołania procedury WorkflowTools.Generate(...). Wynik dla definicji zadania startowego jest ustawiany na zadaniu tylko jeżeli ustawiono właściwość InitParent (obiekt w takiej sytuacji jest tworzony ale nie powiązany z zadaniem).
+// 2. Jeżeli pkt. 1 nie ustawi wartości to:
+//   - jeżeli definicja zadania jest powiązana z tabelą WFWorkflow to zwracany jest parametr workflow metody
+//   - jeżeli definicja zadania nie jest startową zwracana jest wartość wywołania metody workflow.SearchParents(...), która wyszukuje obiekt o określonym w definicji zadania typie powiązany z poprzednim zadaniem
+//   - jeżeli definicja zadania jest powiązana z tabelą zgodną z przekazanym wierszem (row) to zwracany jest parametr workflow metody
+// W innym przypadku zwracana jest wartość null
+// Jeżeli metoda wywoływana jest dla akcji automatycznej nie powiązanej z workflow parametry task, workflow i row mają wartość null natomiast context jest pusty (kalkulator ma ustawioną tylko właściwość Definition)
+//** end get parent **
+
+//** begin get managing row **
+public override IManagingRow GetManagingRow(Soneta.Business.Db.GetManagingRowHandlerEventArgs args) {
+	return base.GetManagingRow(args);
+}
+//** end get managing row **
+
+//** begin allow attachment signing **
+public override bool AllowAttachmentSigning(Soneta.Business.Db.AllowAttachmentSigningHandlerEventArgs args) {
+	return base.AllowAttachmentSigning(args);
+}
+//** end allow attachment signing **
+
+//** begin dependent on workflow condition **
+
+//** end dependent on workflow condition **
+
+//** begin get task users **
+
+//** end get task users **
+
+}
+
+#region Parametry Email dla Workflow
+
+//[EmailTo=]
+//[EmailSubject=]
+//[EmailContent=]
+
+#endregion Parametry Email dla Workflow
+
+</Code>
+    <OperatorType>Current</OperatorType>
+    <Operator />
+    <ActionType>None</ActionType>
+    <ActionRunAt>Auto</ActionRunAt>
+    <RoleGuid>00000000-0000-0000-0000-000000000000</RoleGuid>
+    <DeleteOnRealized>BeforeValidDate</DeleteOnRealized>
+    <WizardDefinition />
+    <WizardInstruction />
+    <SonetaExplorer>False</SonetaExplorer>
+    <InWorkflowUse>False</InWorkflowUse>
+    <MakeParentReadonly>False</MakeParentReadonly>
+    <IsStart>False</IsStart>
+    <WFDefinition>WFDefinition_15</WFDefinition>
+    <WFDefItem>WFDefItem:00000000-0016-0002-0003-000000000000</WFDefItem>
+    <OGSchema />
+    <InitParent>False</InitParent>
+    <XML />
+    <IsSingleInstance>False</IsSingleInstance>
+    <OverdueHandling>False</OverdueHandling>
+    <OverdueServiceType />
+    <MultiTaskType>NoMultiTask</MultiTaskType>
+    <GetSysNotificationsCode>
+      <Code />
+    </GetSysNotificationsCode>
+    <VerifierCheckType>Warning</VerifierCheckType>
+    <ProcessManagementVisibilityType>ShowBoth</ProcessManagementVisibilityType>
+    <ProcessRole>WFProcessRole_23</ProcessRole>
+    <SubprocessDef />
+    <TaskTriggers>
+      <TaskTrigger id="TaskTrigger_157">
+        <TaskDefinition>TaskDefinition_144</TaskDefinition>
+        <TableName>BasicDocs</TableName>
+        <Code>public override GuidedRow[] GetGuidedRows() {
+	return new GuidedRow[] { BasicDocument };
+}
+
+// W kodzie możesz używać następujacych zmiennych:
+// Soneta.Business.Db.TaskTrigger : TaskTrigger - definicja wyzwalacza zadania
+// BasicDocument : BasicDocument - Wiersz którego zmiana inicjalizuje przeliczenie taska
+// Należy zwrócić obiekt typu BasicDocument,
+// dla którego ma zostać wykonany task</Code>
+      </TaskTrigger>
+    </TaskTriggers>
+    <WFItemDescRels />
+  </TaskDefinition>
+  <WFTransition id="WFTransition_119" guid="b8fe5f44-73d0-45f4-b90d-78d958ee39c9">
+    <LP>0</LP>
+    <Name>A</Name>
+    <Source>TaskDefinition_140</Source>
+    <Target>TaskDefinition_141</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0001-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	var basicDoc = (BasicDocument)task.Parent;
+	if (!basicDoc.ForeignSign.IsNullOrEmpty())
+		return true;
+	
+	return false;
+}
+
+#endregion
+
+#region IsReadOnly
+
+public override bool IsReadOnly(Soneta.Business.Db.Task task) {
+	return base.IsReadOnly(task);
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible(Soneta.Business.Db.Task task) {
+	return base.IsVisible(task);
+}
+
+#endregion</Statement>
+    <XML />
+    <IsUserDecision>False</IsUserDecision>
+    <IsDefaultTransition>False</IsDefaultTransition>
+    <CheckCode>
+      <Code />
+    </CheckCode>
+    <ActionCode>
+      <Code />
+    </ActionCode>
+    <NameTranslation />
+    <WfDefinition>WFDefinition_15</WfDefinition>
+    <WFItemDescRels />
+  </WFTransition>
+  <WFTransition id="WFTransition_120" guid="7aa665a3-28ef-4e79-ac04-9a49a527454a">
+    <LP>0</LP>
+    <Name>B</Name>
+    <Source>TaskDefinition_141</Source>
+    <Target>TaskDefinition_142</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+	return task.WFTransition!=null &amp;&amp; task.WFTransition==Transition;
+}
+
+#endregion</Statement>
+    <XML />
+    <IsUserDecision>True</IsUserDecision>
+    <IsDefaultTransition>False</IsDefaultTransition>
+    <CheckCode>
+      <Code />
+    </CheckCode>
+    <ActionCode>
+      <Code />
+    </ActionCode>
+    <NameTranslation />
+    <WfDefinition>WFDefinition_15</WfDefinition>
+    <WFItemDescRels />
+  </WFTransition>
+  <WFTransition id="WFTransition_121" guid="572ea385-2cc7-4e63-a2b5-b0db12151fdd">
+    <LP>0</LP>
+    <Name>C</Name>
+    <Source>TaskDefinition_142</Source>
+    <Target>TaskDefinition_143</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0002-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+    var dalej =  task.WFWorkflow.SearchTasks(task).Where(x =&gt; x.Progress == TaskProgress.Realized).Count()&gt;0;
+    return (task.WFTransition!=null &amp;&amp; task.WFTransition==Transition) || dalej;
+}
+
+#endregion
+
+#region IsReadOnly
+
+public override bool IsReadOnly(Soneta.Business.Db.Task task) {
+	return base.IsReadOnly(task);
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible(Soneta.Business.Db.Task task) {
+	return base.IsVisible(task);
+}
+
+#endregion</Statement>
+    <XML />
+    <IsUserDecision>True</IsUserDecision>
+    <IsDefaultTransition>False</IsDefaultTransition>
+    <CheckCode>
+      <Code />
+    </CheckCode>
+    <ActionCode>
+      <Code />
+    </ActionCode>
+    <NameTranslation />
+    <WfDefinition>WFDefinition_15</WfDefinition>
+    <WFItemDescRels />
+  </WFTransition>
+  <WFTransition id="WFTransition_122" guid="d59117e1-ce0c-4bb7-a2d9-45acc1e51c4e">
+    <LP>0</LP>
+    <Name>D</Name>
+    <Source>TaskDefinition_143</Source>
+    <Target>TaskDefinition_144</Target>
+    <WFTransitionDefinition>00000000-0016-0001-0001-000000000000</WFTransitionDefinition>
+    <Statement>#region IsRealized
+
+public override bool IsRealized(Soneta.Business.Db.Task task) {
+return task.WFWorkflow.SearchPreviousTasks(task).Where(x =&gt; x.Progress != TaskProgress.Realized).Count()==0;
+}
+
+#endregion
+
+#region IsReadOnly
+
+public override bool IsReadOnly(Soneta.Business.Db.Task task) {
+	return base.IsReadOnly(task);
+}
+
+#endregion
+
+#region IsVisible
+
+public override bool IsVisible(Soneta.Business.Db.Task task) {
+	return base.IsVisible(task);
+}
+
+#endregion</Statement>
+    <XML />
+    <IsUserDecision>False</IsUserDecision>
+    <IsDefaultTransition>False</IsDefaultTransition>
+    <CheckCode>
+      <Code />
+    </CheckCode>
+    <ActionCode>
+      <Code />
+    </ActionCode>
+    <NameTranslation />
+    <WfDefinition>WFDefinition_15</WfDefinition>
+    <WFItemDescRels />
+  </WFTransition>
+</session>

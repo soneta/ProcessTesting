@@ -5,9 +5,14 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Res\DokKosztowy.xml" />
+    <None Remove="Res\WfTest.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Res\DokKosztowy.xml" />
+    <EmbeddedResource Include="Res\WfTest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.1.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProcessTesting\ProcessTesting.csproj" />
