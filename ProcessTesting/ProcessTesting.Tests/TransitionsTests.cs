@@ -20,6 +20,15 @@ namespace ProcessTesting.Tests
 
         [Test]
         public void ShouldGoThroughAutomaticTransition() {
+            var process = GoToFirstTask();
+
+            var tasks = process.Tasks.OfType<Task>().ToList();
+            tasks.Count.Should().Be(2);
+            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(1);
+            tasks.Count(t => t.Progress == TaskProgress.Active && t.Name == "FirstTask").Should().Be(1);
+        }
+
+        private WFWorkflow GoToFirstTask() {
             var (process, basicDoc) = StartBasicDocProcess();
 
             process.Should().NotBeNull();
@@ -29,10 +38,7 @@ namespace ProcessTesting.Tests
             InUITransaction(() => basicDoc.ForeignSign = "xyz");
             SaveDispose();
 
-            var tasks = Get(process).Tasks.OfType<Task>().ToList();
-            tasks.Count.Should().Be(2);
-            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(1);
-            tasks.Count(t => t.Progress == TaskProgress.Active && t.Name == "FirstTask").Should().Be(1);
+            return Get(process);
         }
 
         private (WFWorkflow, BasicDocument) StartBasicDocProcess() {
@@ -42,6 +48,22 @@ namespace ProcessTesting.Tests
             var processes = Session.GetWorkflow().WFWorkflows.WgWorkflowDefinition[wfDef];
 
             return (processes.GetFirst(), basicDoc);
+        }
+
+        [Test]
+        public void ShouldGoThroughOperatorsChoiceTransitionTest() {
+            var process = GoToFirstTask();
+            var firstTask = process.Tasks.OfType<Task>()
+                .Single(t => t.Progress == TaskProgress.Active && t.Name == "FirstTask");
+            firstTask.Should().NotBeNull();
+
+            InTransaction(() => firstTask.GoThru("B"));
+            SaveDispose();
+
+            var tasks = Get(process).Tasks.OfType<Task>().ToList();
+            tasks.Count.Should().Be(4);
+            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(2);
+            tasks.Count(t => t.Progress == TaskProgress.Active && t.Name == "MultiTask").Should().Be(2);
         }
     }
 }
