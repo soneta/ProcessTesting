@@ -1,6 +1,4 @@
-﻿using System;
-using Soneta.Test;
-using System.Reflection;
+﻿using Soneta.Test;
 using NUnit.Framework;
 using Soneta.Workflow;
 using FluentAssertions;
@@ -8,7 +6,6 @@ using Soneta.Business;
 using Soneta.Core.DbTuples;
 using Soneta.Test.Helpers.Extensions;
 using Soneta.Workflow.Config;
-using Soneta.Workflow.Dms;
 using static ProcessTesting.Tests.Tools;
 
 namespace ProcessTesting.Tests
@@ -26,31 +23,11 @@ namespace ProcessTesting.Tests
         [Test]
         public void ShouldAutomaticallyStartProcessTest() {
             var wfDefGuid = Guids[Names.WfTest];
-            var wfDef = ImportWfDefinition(wfDefGuid, "WfTest.xml");
+            var wfDef = ImportWfDefinition(this, wfDefGuid, "WfTest.xml");
 
-            AddBasicDocument();
+            AddBasicDocument(this);
 
             AssertStartedProcess(Get(wfDef));
-        }
-
-        private WFDefinition ImportWfDefinition(Guid wfDefGuid, string resourceName) {
-            SetDefinition(this, wfDefGuid, resourceName);
-            var wfDef = Session.GetWorkflow().WFDefs[wfDefGuid];
-            wfDef.Should().NotBeNull();
-
-            return wfDef;
-        }
-
-        private void AddBasicDocument() {
-            var dmsModule = Session.GetDms();
-            var definition = dmsModule.BasicDocDefs.ByName["Pismo"];
-            definition.Should().NotBeNull();
-            var register = dmsModule.Registers.ByName["Przychodzące"];
-            register.Should().NotBeNull();
-
-            Add(new BasicDocument(definition, register));
-
-            SaveDispose();
         }
 
         private void AssertStartedProcess(WFDefinition wfDef) {
@@ -62,7 +39,7 @@ namespace ProcessTesting.Tests
         [Test]
         public void ShouldManuallyStartProcessTest() {
             var wfDefGuid = Guids[Names.CostLetterProcess];
-            var wfDef = ImportWfDefinition(wfDefGuid, "DokKosztowy.xml");
+            var wfDef = ImportWfDefinition(this, wfDefGuid, "DokKosztowy.xml");
             SetRightsOnTupleDef();
 
             InUITransaction(() => {
