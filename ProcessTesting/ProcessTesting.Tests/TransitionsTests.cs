@@ -2,7 +2,10 @@
 using FluentAssertions;
 using NUnit.Framework;
 using Soneta.Business.Db;
+using Soneta.Core.DbTuples;
+using Soneta.CRM;
 using Soneta.Test;
+using Soneta.Types;
 using Soneta.Workflow;
 using Soneta.Workflow.Dms;
 using static ProcessTesting.Tests.Tools;
@@ -19,7 +22,7 @@ namespace ProcessTesting.Tests
         }
 
         [Test]
-        public void ShouldGoThroughAutomaticTransition() {
+        public void ShouldGoThroughAutomaticTransitionTest() {
             var process = GoToFirstTask();
 
             var tasks = process.Tasks.OfType<Task>().ToList();
@@ -73,11 +76,11 @@ namespace ProcessTesting.Tests
         }
 
         [Test]
-        public void ShouldEndMultitaskWhenOneOperatorMakesChoice() {
+        public void ShouldEndMultitaskWhenOneOperatorMakesChoiceTest() {
             var process = GoToMultitask();
 
             var task = process.Tasks.OfType<Task>().Single(t =>
-                t.Progress == TaskProgress.Active && t.Name == "MultiTask" && t.Operator != null && t.Operator.Name == "Administrator");
+                t.Progress == TaskProgress.Active && t.Name == "MultiTask" && t.Operator?.Name == "Administrator");
             task.Should().NotBeNull();
 
             InTransaction(() => task.GoThru("C"));
@@ -89,6 +92,34 @@ namespace ProcessTesting.Tests
             var tasks = process.Tasks.OfType<Task>().ToList();
             tasks.Count.Should().Be(6);
             tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(6);
+        }
+
+        [Test]
+        public void ShouldFillFieldsAndGoThroughTransitionTest() {
+            var wfDef = StartProcessTests.StartCostLetterProcessManually(this);
+            var wm = Session.GetWorkflow();
+            var process = wm.WFWorkflows.WgWorkflowDefinition[wfDef].GetFirst();
+            process.Should().NotBeNull();
+
+
+            var task = process.Tasks.OfType<Task>().Single();
+            task.Should().NotBeNull();
+            var dbTuple = task.Parent as DbTuple;
+            dbTuple.Should().NotBeNull();
+
+            InUITransaction(() => {
+                dbTuple.Fields["Kontrahent"] = Session.GetCRM().Kontrahenci.WgKodu["ABC"];
+                dbTuple.Fields["DataEwidencji"] = Date.Today + 1;
+                dbTuple.Fields["NumerObcy"] = "a";
+                dbTuple.Fields["Kwota"] = new Currency(100m);
+                task.WFTransition = wm.WFTransitions[Guids[Names.ConfirmTransition]];
+            });
+            SaveDispose();
+
+            var tasks = Get(process).Tasks.OfType<Task>().ToList();
+            tasks.Count.Should().Be(2);
+            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(1);
+            tasks.Count(t => t.Progress == TaskProgress.Active).Should().Be(1);
         }
     }
 }

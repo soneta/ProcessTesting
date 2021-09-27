@@ -38,26 +38,32 @@ namespace ProcessTesting.Tests
 
         [Test]
         public void ShouldManuallyStartProcessTest() {
-            var wfDefGuid = Guids[Names.CostLetterProcess];
-            var wfDef = ImportWfDefinition(this, wfDefGuid, "DokKosztowy.xml");
-            SetRightsOnTupleDef();
-
-            InUITransaction(() => {
-                var cx = Context.Empty.Clone(Session);
-                WorkflowTools.StartWorkflowProcess(wfDef, true,
-                    Session.CurrentTransaction,
-                    null, ref cx, out var taskCreated);
-                taskCreated.Should().BeTrue();
-            });
-            SaveDispose();
+            var wfDef = StartCostLetterProcessManually(this);
 
             AssertStartedProcess(Get(wfDef));
         }
 
-        private void SetRightsOnTupleDef() {
-            var dbTupleDef = GetConfig<DbTupleDefinition>(Guids[Names.CostLetterTupleDef]);
+        internal static WFDefinition StartCostLetterProcessManually(TestBase testBase) {
+            var wfDefGuid = Guids[Names.CostLetterProcess];
+            var wfDef = ImportWfDefinition(testBase, wfDefGuid, "DokKosztowy.xml");
+            SetRightsOnTupleDef(testBase);
+
+            testBase.InUITransaction(() => {
+                var cx = Context.Empty.Clone(testBase.Session);
+                WorkflowTools.StartWorkflowProcess(wfDef, true,
+                    testBase.Session.CurrentTransaction,
+                    null, ref cx, out var taskCreated);
+                taskCreated.Should().BeTrue();
+            });
+            testBase.SaveDispose();
+
+            return testBase.Get(wfDef);
+        }
+
+        private static void SetRightsOnTupleDef(TestBase testBase) {
+            var dbTupleDef = testBase.GetConfig<DbTupleDefinition>(Guids[Names.CostLetterTupleDef]);
             dbTupleDef.Should().NotBeNull();
-            dbTupleDef.SetRightSource(ConfigEditSession, AccessRights.Granted, SaveDisposeConfig);
+            dbTupleDef.SetRightSource(testBase.ConfigEditSession, AccessRights.Granted, testBase.SaveDisposeConfig);
         }
     }
 }
