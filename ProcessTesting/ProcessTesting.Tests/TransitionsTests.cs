@@ -52,6 +52,15 @@ namespace ProcessTesting.Tests
 
         [Test]
         public void ShouldGoThroughOperatorsChoiceTransitionTest() {
+            var process = GoToMultitask();
+
+            var tasks = process.Tasks.OfType<Task>().ToList();
+            tasks.Count.Should().Be(4);
+            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(2);
+            tasks.Count(t => t.Progress == TaskProgress.Active && t.Name == "MultiTask").Should().Be(2);
+        }
+
+        private WFWorkflow GoToMultitask() {
             var process = GoToFirstTask();
             var firstTask = process.Tasks.OfType<Task>()
                 .Single(t => t.Progress == TaskProgress.Active && t.Name == "FirstTask");
@@ -60,10 +69,26 @@ namespace ProcessTesting.Tests
             InTransaction(() => firstTask.GoThru("B"));
             SaveDispose();
 
-            var tasks = Get(process).Tasks.OfType<Task>().ToList();
-            tasks.Count.Should().Be(4);
-            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(2);
-            tasks.Count(t => t.Progress == TaskProgress.Active && t.Name == "MultiTask").Should().Be(2);
+            return Get(process);
+        }
+
+        [Test]
+        public void ShouldEndMultitaskWhenOneOperatorMakesChoice() {
+            var process = GoToMultitask();
+
+            var task = process.Tasks.OfType<Task>().Single(t =>
+                t.Progress == TaskProgress.Active && t.Name == "MultiTask" && t.Operator != null && t.Operator.Name == "Administrator");
+            task.Should().NotBeNull();
+
+            InTransaction(() => task.GoThru("C"));
+            SaveDispose();
+
+            process = Get(process);
+            process.IsClosed.Should().BeTrue();
+
+            var tasks = process.Tasks.OfType<Task>().ToList();
+            tasks.Count.Should().Be(6);
+            tasks.Count(t => t.Progress == TaskProgress.Realized).Should().Be(6);
         }
     }
 }
